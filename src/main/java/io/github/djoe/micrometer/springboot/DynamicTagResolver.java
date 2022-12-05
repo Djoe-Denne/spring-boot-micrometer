@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.stream.Stream;
 
 /**
- * Dynamic tag resolver, use {@link JoinPointExpressionEvaluator} ton process {@code value} attribute of all {@link DynamicTag}
+ * Dynamic tag resolver, use {@link JoinPointExpressionEvaluator} to process {@code value} attribute of all {@link DynamicTag}
  * annotation over current proceeding method and its declaring class.
  *
  * is {@code value} attribute cannot be parsed using SpEL parser, current {@link DynamicTag} is skipped
@@ -20,7 +20,7 @@ import java.util.stream.Stream;
  * @author djoedenne
  */
 @RequiredArgsConstructor
-public class DynamicTagResolver {
+public class DynamicTagResolver implements JoinPointTagResolver {
     private final JoinPointExpressionEvaluator joinPointExpressionEvaluator;
 
     /**

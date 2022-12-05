@@ -55,3 +55,8 @@ If we call `foo2` a new timing and counting will be registered with following ta
 * `static-second-method-tag`
 * `dynamic-second-method-tag-1`
 * `dynamic-second-method-tag-2`
+
+## Add JoinPoint tags resolver
+
+By implementing `JoinPointTagResolver` and declaring it has a bean, it will automatically be used by Micrometric Aspect. 
+You can declare how many you want.
